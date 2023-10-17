@@ -1,0 +1,412 @@
+{
+  "project": {
+    "name": "",
+    "project_id": ""
+  },
+  "workflow": {
+    "source": {
+      "last_event": {
+        "tool": "github",
+        "action": "push",
+        "timestamp": "2023-05-04T19:26:16.179Z",
+        "branch": "main"
+      },
+      "secondary_branches": [],
+      "name": "",
+      "service": "github",
+      "accountId": "63e1e006ccda9b0047be4b8e",
+      "workspace": "",
+      "workspaceName": "",
+      "repository": "terraform-iac",
+      "repoId": "opsera-gimartinb/terraform-iac",
+      "projectId": "opsera-gimartinb/terraform-iac",
+      "gitUrl": "https://github.com/opsera-gimartinb/terraform-iac",
+      "sshUrl": "git@github.com:opsera-gimartinb/terraform-iac.git",
+      "branch": "main",
+      "key": "",
+      "trigger_active": true,
+      "isPushEvent": true,
+      "isPrEvent": false,
+      "isMonitored": false,
+      "prCreatedEvent": true,
+      "prApprovedEvent": false,
+      "gitExportEnabled": true,
+      "gitExportPath": "pipeline-backup",
+      "dynamicSettings": false,
+      "allowDynamicSettingsInUi": false,
+      "enableBranchSwitch": false
+    },
+    "schedule": {
+      "start_date": null,
+      "end_date": null,
+      "frequency": ""
+    },
+    "last_step": {
+      "failed": {
+        "step_id": "644aed222d417a00c6be6fa5",
+        "activity_id": "645406ef8e55d8007a3d74f4",
+        "status": "failed",
+        "updatedAt": "2023-05-04T19:26:39.576Z"
+      },
+      "status": "stopped",
+      "step_id": "644aed222d417a00c6be6fa5",
+      "check_count": 2
+    },
+    "last_run": {
+      "completed": "2023-05-04T19:26:39.630Z",
+      "run_count": 51,
+      "status": "failed"
+    },
+    "plan": [
+      {
+        "tool": {
+          "tool_identifier": "gitscraper",
+          "configuration": {
+            "gitFilePath": "",
+            "repository": "terraform-iac",
+            "gitBranch": "main",
+            "gitToolId": "63e1e006ccda9b0047be4b8e",
+            "repoId": "opsera-gimartinb/terraform-iac",
+            "sshUrl": "git@github.com:opsera-gimartinb/terraform-iac.git",
+            "gitUrl": "https://github.com/opsera-gimartinb/terraform-iac",
+            "bitbucketWorkspace": "",
+            "bitbucketWorkspaceName": "",
+            "type": "git_custodian",
+            "commits": "",
+            "threshold": 0,
+            "excludeSecrets": [],
+            "excludeFiles": [],
+            "secretsException": false,
+            "filesException": false,
+            "service": "github",
+            "workspace": "",
+            "projectId": "opsera-gimartinb/terraform-iac"
+          },
+          "threshold": {
+            "type": "",
+            "value": ""
+          },
+          "job": null
+        },
+        "trigger": [],
+        "type": [
+          "code-scan"
+        ],
+        "notification": [],
+        "tags": [
+          {
+            "type": "pipeline",
+            "value": "scan-for-secrets-in-code_644aed222d417a00c6be6fa5"
+          }
+        ],
+        "_id": "644aed222d417a00c6be6fa5",
+        "name": "Scan your Git Repos in Real-Time for Secrets",
+        "description": "",
+        "active": true,
+        "updatedAt": "2023-04-27T21:46:10.152Z",
+        "orchestration_type": "standard"
+      },
+      {
+        "tool": {
+          "tool_identifier": "terrascan",
+          "configuration": {
+            "type": "github",
+            "jobType": "SHELL SCRIPT",
+            "toolConfigId": "627938f49f84e20012400b07",
+            "toolName": "solutions-engineers - Jenkins",
+            "jobName": "SHELL_SCRIPT_V2_63e1e13cb386530047a07a8f_63e1e8a45a48c00047a72bf1",
+            "toolJobId": "6283d80b5400590013d6cd9e",
+            "projectId": "",
+            "buildType": "",
+            "gitToolId": "63e1e006ccda9b0047be4b8e",
+            "repoId": "opsera-gimartinb/terraform-iac",
+            "gitUrl": "https://github.com/opsera-gimartinb/terraform-iac",
+            "sshUrl": "git@github.com:opsera-gimartinb/terraform-iac.git",
+            "service": "github",
+            "gitCredential": "gilbert-Iac",
+            "workspace": "",
+            "workspaceName": "",
+            "repository": "terraform-iac",
+            "gitBranch": "main",
+            "agentLabels": "generic-linux",
+            "autoScaleEnable": true,
+            "outputPath": "",
+            "outputFileName": "",
+            "dependencies": {
+              "terrascan": "1.4.0"
+            },
+            "dependencyType": [
+              {
+                "name": "Terrascan Version 1.4.0",
+                "dependencyType": "terrascan",
+                "version": "1.4.0"
+              }
+            ],
+            "workspaceDeleteFlag": false,
+            "sourceScript": false,
+            "inputPath": "",
+            "inputFileName": "",
+            "platform": "aws",
+            "terrascanConfigFilePath": "terraform",
+            "rules": [
+              "aws_ami",
+              "aws_ami_launch_permission",
+              "aws_api_gateway_method_settings",
+              "aws_api_gateway_rest_api",
+              "aws_api_gateway_stage",
+              "aws_apigatewayv2_api",
+              "aws_apigatewayv2_stage",
+              "aws_cloudformation_stack",
+              "aws_cloudfront_distribution",
+              "aws_cloudtrail",
+              "aws_cloudwatch",
+              "aws_config",
+              "aws_config_configuration_aggregator",
+              "aws_db_instance",
+              "aws_db_security_group",
+              "aws_ebs_encryption_by_default",
+              "aws_ebs_volume",
+              "aws_ecr_repository",
+              "aws_ecr_repository_policy",
+              "aws_ecs_service",
+              "aws_ecs_task_definition",
+              "aws_efs_file_system",
+              "aws_elasticache_cluster",
+              "aws_elasticsearch_domain",
+              "aws_elb",
+              "aws_guardduty_detector",
+              "aws_iam_access_key",
+              "aws_iam_account_password_policy",
+              "aws_iam_group_policy",
+              "aws_iam_policy",
+              "aws_iam_role",
+              "aws_iam_role_policy",
+              "aws_iam_user_login_profile",
+              "aws_iam_user_policy",
+              "aws_instance",
+              "aws_kinesis_firehose_delivery_stream",
+              "aws_kinesis_stream",
+              "aws_kms_key",
+              "aws_lambda_function",
+              "aws_launch_configuration",
+              "aws_load_balancer_policy",
+              "aws_mq_broker",
+              "aws_rds_cluster",
+              "aws_redshift_cluster",
+              "aws_route53_query_log",
+              "aws_route53_record",
+              "aws_s3_bucket",
+              "aws_s3_bucket_policy",
+              "aws_security_group",
+              "aws_sns_topic",
+              "aws_sqs_queue",
+              "aws_vpc"
+            ],
+            "toolJobName": "Shell Script"
+          },
+          "threshold": {
+            "type": "",
+            "value": ""
+          },
+          "job_type": "shell script",
+          "job": null
+        },
+        "last_status": {
+          "data": {
+            "runCount": 47,
+            "action": "START",
+            "status": "FAILURE",
+            "message": "Job is Failed",
+            "buildNumber": 5,
+            "jobName": "SHELL_SCRIPT_V2_63e1e13cb386530047a07a8f_63e1e8a45a48c00047a72bf1"
+          },
+          "updatedAt": "2023-04-25T19:59:05.306Z"
+        },
+        "trigger": [],
+        "type": [
+          "compliance-sec"
+        ],
+        "notification": [],
+        "tags": [
+          {
+            "type": "pipeline",
+            "value": "terrascan_63e1e8a45a48c00047a72bf1"
+          }
+        ],
+        "_id": "63e1e8a45a48c00047a72bf1",
+        "name": "Detect comp and security violations across (IaC)",
+        "description": "",
+        "active": false,
+        "updatedAt": "2023-02-07T05:59:00.345Z",
+        "orchestration_type": "standard"
+      },
+      {
+        "tool": {
+          "tool_identifier": "snyk",
+          "configuration": {
+            "snykProducts": [
+              "code scan",
+              "open source scan"
+            ],
+            "languageLevelId": "composer",
+            "version": "latest",
+            "packagerNameOrBuildTool": "",
+            "toolConfigId": "63e67e5d2e874f001806b834",
+            "multiModuleProject": true,
+            "thresholdVulnerability": [
+              {
+                "level": "critical",
+                "count": 0
+              }
+            ],
+            "gitToolId": "63e1e006ccda9b0047be4b8e",
+            "repoId": "opsera-gimartinb/terraform-iac",
+            "repository": "terraform-iac",
+            "gitBranch": "main",
+            "service": "github",
+            "sshUrl": "git@github.com:opsera-gimartinb/terraform-iac.git",
+            "gitUrl": "https://github.com/opsera-gimartinb/terraform-iac",
+            "clientSideThreshold": true,
+            "workspace": "",
+            "gitCredential": "Github-Gilbert",
+            "projectId": "opsera-gimartinb/terraform-iac"
+          },
+          "job": null
+        },
+        "trigger": [],
+        "type": [
+          "code-scan"
+        ],
+        "notification": [],
+        "tags": [
+          {
+            "type": "pipeline",
+            "value": "snyk-scan_63e67c8629f5de0012c86123"
+          }
+        ],
+        "_id": "63e67c8629f5de0012c86123",
+        "name": "Snyk Scan",
+        "description": "",
+        "active": false,
+        "updatedAt": "2023-02-10T17:19:02.557Z",
+        "orchestration_type": "standard"
+      },
+      {
+        "tool": {
+          "tool_identifier": "terraform",
+          "configuration": {
+            "toolActionType": "DELETE",
+            "gitFilePath": "terraform",
+            "gitRepository": "terraform-iac",
+            "defaultBranch": "main",
+            "awsToolConfigId": "63e1e6ce5a48c00047a72053",
+            "accessKeyParamName": "",
+            "secretKeyParamName": "",
+            "regionParamName": "",
+            "type": "github",
+            "gitToolId": "63e1e006ccda9b0047be4b8e",
+            "gitRepositoryID": "opsera-gimartinb/terraform-iac",
+            "sshUrl": "git@github.com:opsera-gimartinb/terraform-iac.git",
+            "gitUrl": "https://github.com/opsera-gimartinb/terraform-iac",
+            "bitbucketWorkspace": "",
+            "bitbucketWorkspaceName": "",
+            "keyValueMap": {
+              "ami_id": "ami-0beaa649c482330f7",
+              "tag_name": "test-terraform-ec2"
+            },
+            "customParameters": "",
+            "saveParameters": false,
+            "iamRoleFlag": false,
+            "roleArn": "",
+            "roleName": "",
+            "storeStateInBucket": false,
+            "bucketName": "terrafom-demo-state",
+            "bucketRegion": "us-east-2",
+            "cloudProvider": "aws",
+            "tag": "latest",
+            "resourceGroup": "",
+            "storageName": "",
+            "containerName": "",
+            "azureToolConfigId": "",
+            "terraformCloudId": "",
+            "organizationName": "",
+            "workspaceName": "",
+            "backendState": "S3",
+            "azureCredentialId": "",
+            "inputParameters": [],
+            "saveInputParameters": false,
+            "stateRemote": true,
+            "stateFile": "manual",
+            "customScript": false,
+            "terraformCommands": "",
+            "saveEnvironmentVariables": false,
+            "environmentVariables": [],
+            "isVariableFile": false,
+            "inputFilePaths": [],
+            "azureCPCredentialId": "",
+            "azureCPToolConfigId": "",
+            "workspace": "",
+            "gitBranch": ""
+          },
+          "threshold": {
+            "type": "",
+            "value": ""
+          },
+          "job": null
+        },
+        "trigger": [],
+        "type": [
+          "infrastructure-code"
+        ],
+        "notification": [],
+        "tags": [
+          {
+            "type": "pipeline",
+            "value": "terraform-build_5ec7c8cedc73d971e2860b68"
+          }
+        ],
+        "_id": "5ec7c8cedc73d971e2860b68",
+        "name": "Terraform Build",
+        "description": "",
+        "active": true,
+        "updatedAt": "2020-05-22T12:42:54.717Z",
+        "orchestration_type": "standard"
+      }
+    ],
+    "run_count": 51
+  },
+  "tags": [
+    {
+      "type": "pipeline",
+      "value": "terraform-gilbert"
+    }
+  ],
+  "type": [],
+  "_id": "63e1e13cb386530047a07a8f",
+  "owner": "6279319c5be21c001212a529",
+  "roles": [
+    {
+      "role": "administrator",
+      "user": "",
+      "group": "opsera-solution-engineers",
+      "site_role": ""
+    },
+    {
+      "role": "administrator",
+      "user": "gilbert@opsera.us",
+      "group": "",
+      "site_role": ""
+    }
+  ],
+  "organizationName": "opsera.us",
+  "account": "org130-acc0",
+  "name": "IaC Terraform Use-Case Template",
+  "template": "5ec7c8cedc73d9532e860b67",
+  "templateIdentifier": "",
+  "description": "Create a new template from scratch.",
+  "active": true,
+  "createdAt": "2023-02-07T05:27:24.967Z",
+  "updatedAt": "2023-05-04T19:26:39.668Z",
+  "__v": 0,
+  "owner_name": "gilbert martin"
+}
